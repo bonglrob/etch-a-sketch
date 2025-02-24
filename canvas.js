@@ -22,12 +22,18 @@
         return container;
     }
 
+    function changePanelColor(event) {
+        const panel = event.target;
+        panel.classList.toggle("panel--bg-color-green");
+    }
+
     function genPanels(times) {
         const container = genContainer();
 
         for (let i = 0; i < times; i++) {
             let panel = gen("div");
             panel.classList.add("panel");
+            panel.addEventListener("mouseover", changePanelColor);
             container.appendChild(panel);
         }
         return container;
