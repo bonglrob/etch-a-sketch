@@ -1,8 +1,12 @@
+.wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .panel {

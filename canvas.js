@@ -2,10 +2,10 @@
     window.addEventListener("load", init);
 
     function init() {
-        const mainContainer = qs("main");
+        const wrapperContainer = qs("main > .wrapper");
         const panel = genPanel();
     
-        mainContainer.appendChild(panel);
+        wrapperContainer.appendChild(panel);
     }
 
     function qs(selector) {
