@@ -3,9 +3,9 @@
 
     function init() {
         const wrapperContainer = qs("main > .wrapper");
-        const panel = genPanel();
+        const panels = genPanels(256);
     
-        wrapperContainer.appendChild(panel);
+        wrapperContainer.appendChild(panels);
     }
 
     function qs(selector) {
@@ -22,10 +22,10 @@
         return container;
     }
 
-    function genPanel() {
+    function genPanels(times) {
         const container = genContainer();
 
-        for (let i = 0; i < 256; i++) {
+        for (let i = 0; i < times; i++) {
             let panel = gen("div");
             panel.classList.add("panel");
             container.appendChild(panel);
