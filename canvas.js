@@ -3,9 +3,9 @@
 
     function init() {
         const mainContainer = qs("main");
-        const board = genBoard();
+        const panel = genPanel();
     
-        mainContainer.appendChild(board);
+        mainContainer.appendChild(panel);
     }
 
     function qs(selector) {
@@ -22,13 +22,13 @@
         return container;
     }
 
-    function genBoard() {
+    function genPanel() {
         const container = genContainer();
 
         for (let i = 0; i < 256; i++) {
-            let board = gen("div");
-            board.classList.add("board");
-            container.appendChild(board);
+            let panel = gen("div");
+            panel.classList.add("panel");
+            container.appendChild(panel);
         }
         return container;
     }
